@@ -165,7 +165,7 @@ int AudioStreamer::onAudioFrame(AVFrame *srcFrame) {
 oboe::DataCallbackResult AudioStreamer::onAudioReady(oboe::AudioStream *oboeStream, void *audioData, int32_t numFrames) {
     auto *data = (int16_t *) audioData;
 
-    if (!mFrameBuffer) {
+    if (!mFrameBuffer || !mFrame) {
         // Fill with silence
         std::fill_n(data, numFrames * mNbChannels, 0);
         return oboe::DataCallbackResult::Continue;
