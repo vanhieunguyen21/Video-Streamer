@@ -1,0 +1,14 @@
+prefix=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//x86_64
+exec_prefix=${prefix}
+libdir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//x86_64/lib
+includedir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//x86_64/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.16.100
+Requires: 
+Requires.private: libavcodec >= 59.18.100, libavutil >= 57.17.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -latomic -lz
+Cflags: -I${includedir}

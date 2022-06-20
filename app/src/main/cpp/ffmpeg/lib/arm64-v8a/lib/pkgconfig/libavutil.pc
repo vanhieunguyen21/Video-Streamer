@@ -1,0 +1,14 @@
+prefix=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//arm64-v8a
+exec_prefix=${prefix}
+libdir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//arm64-v8a/lib
+includedir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//arm64-v8a/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.17.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

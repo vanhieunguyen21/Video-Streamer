@@ -1,0 +1,14 @@
+prefix=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//armeabi-v7a
+exec_prefix=${prefix}
+libdir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//armeabi-v7a/lib
+includedir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//armeabi-v7a/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 6.4.100
+Requires: 
+Requires.private: libavutil >= 57.17.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}

@@ -1,0 +1,14 @@
+prefix=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//x86_64
+exec_prefix=${prefix}
+libdir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//x86_64/lib
+includedir=D:/Projects/AndroidStudioProjects/FFmpegBuildForNdk/app/src/main/cpp/output//x86_64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 59.18.100
+Requires: 
+Requires.private: libavutil >= 57.17.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -latomic -lx264 -pthread -lm
+Cflags: -I${includedir}
